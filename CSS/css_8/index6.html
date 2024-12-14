@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        body{
+            background: aqua;
+        }
+        .bg{
+            color: blue;
+        }
+        .boxes{
+            display: flex;
+        }
+
+        .box{
+            height: 344px;
+            width: 344px;
+            background-color: blue;
+            margin: 3px;
+            bottom: 3px;
+        }
+        @media only screen and (max-width:460px) {
+            body{
+                background: violet;
+            }
+
+            .box{
+                background: greenyellow;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        I am a Aqua body DIV.
+    </div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
