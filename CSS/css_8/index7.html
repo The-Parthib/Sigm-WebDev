@@ -22,12 +22,27 @@
             color: peru;
             font-size: 30px;
         }
+        /* .box:first-child{
+            background-color: aqua;
+        } */
+         .box::first-line{
+            color: brown;
+         }
+         [data-color="primary"]{
+                background-color: aqua;
+         }
+         input::placeholder{
+             color: gray;
+             
+         }
     </style>
 </head>
 <body>
     <div class="boxes">
-        <div class="box">hey I'm First Child</div>
+        <div data-color="primary" class="box">hey I'm First Child</div>
         <div class="box">Hey i'm a box</div>
+        <div class="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam laborum voluptatem nobis alias aperiam architecto quam quas minima! Delectus cumque sint suscipit. Ab eos, voluptates id inventore molestias natus, est aut voluptas unde a cumque quisquam hic illum voluptate modi.</div>
+        <input type="text" placeholder="Enter your name">
         <div class="box">Hello I'm also a box</div>
     </div>
 </body>
