@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Object Fit Property</title>
+    <style>
+      .container {
+        height: 600px;
+        width: 683px;
+        border: 2px solid black;
+        background-color: transparent;
+      }
+      .maincontainer {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true");
+        background-position: bottom left;
+      }
+      img {
+        height: 400px;
+        width: 400px;
+        border: 1px solid black;
+        object-position: bottom left;
+        /* object-fit: contain; */
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="maincontainer">
+      <div class="container">
+        <img
+          src="https://www.akamai.com/site/im-demo/perceptual-standard.jpg?imbypass=true"
+          alt="image"
+        />
+      </div>
+    </div>
+  </body>
+</html>
