@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  background-image: url("assets/images/bg.jpg");
+  background-position: center center;
+  background-size: max(1950px, 100vw);
+  background-repeat: no-repeat;
+  height: 80vh;
+  position: relative;
+}
+
+.main .box {
+  height: 80vh;
+  width: 100%;
+  opacity: 0.4;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  max-width: 75vw;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+}
+
+nav img {
+  position: relative;
+  z-index: 10;
+}
+
+nav .flex {
+  position: relative;
+  z-index: 10;
+}
+
+nav #Language {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 6px;
+  height: 30px;
+  width: 75px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+nav #Language option {
+  background-color: #191919b8;
+  color: white;
+  font-weight: 500;
+  padding: 5px;
+}
+
+nav #Language:hover {
+  background-color: rgba(83, 80, 80, 0.493);
+}
+nav #Language option {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+nav .b2 {
+  background-color: red;
+  border-color: transparent;
+  border-radius: 6px;
+  height: 30px;
+  width: 70px;
+  color: white;
+  font-weight: 600;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
