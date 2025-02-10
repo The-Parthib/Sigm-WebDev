@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blooming Flower Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        #flower {
+            width: 300px;
+            height: 300px;
+            transition: transform 1s ease;
+        }
+        #flower:hover {
+            transform: scale(1.1);
+        }
+        .petal {
+            transition: fill 0.5s ease;
+        }
+        #stem {
+            transition: transform 0.5s ease;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg id="flower" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Stem -->
+            <path id="stem" d="M100 180 L100 120" stroke="#4CAF50" stroke-width="10" fill="none"/>
+            
+            <!-- Petals -->
+            <path class="petal" d="M100 100 Q50 50, 20 100 T50 150" fill="#FF69B4" transform="rotate(0 100 100)"/>
+            <path class="petal" d="M100 100 Q50 50, 20 100 T50 150" fill="#FF1493" transform="rotate(72 100 100)"/>
+            <path class="petal" d="M100 100 Q50 50, 20 100 T50 150" fill="#FF69B4" transform="rotate(144 100 100)"/>
+            <path class="petal" d="M100 100 Q50 50, 20 100 T50 150" fill="#FF1493" transform="rotate(216 100 100)"/>
+            <path class="petal" d="M100 100 Q50 50, 20 100 T50 150" fill="#FF69B4" transform="rotate(288 100 100)"/>
+            
+            <!-- Center -->
+            <circle cx="100" cy="100" r="20" fill="#FFD700"/>
+        </svg>
+        <br>
+        <button onclick="bloomFlower()">Bloom Flower</button>
+    </div>
+
+    <script>
+        function bloomFlower() {
+            const petals = document.querySelectorAll('.petal');
+            const stem = document.getElementById('stem');
+            
+            petals.forEach((petal, index) => {
+                petal.style.transform = `rotate(${index * 72 + 45} 100 100) scale(1.2)`;
+                petal.style.fill = ['#FF69B4', '#FF1493'][index % 2];
+            });
+            
+            stem.style.transform = 'scaleY(0.8)';
+        }
+    </script>
+</body>
+</html>
