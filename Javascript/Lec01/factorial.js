@@ -7,3 +7,6 @@ let fact = (e) => {
 };
 
 console.log(fact(5));
+
+
+// reccursion function
