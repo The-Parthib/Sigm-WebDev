@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JS selectors</title>
+    <style>
+            body{
+            background-color: #212121;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 74px;
+            width: 84px;
+            padding: 34px;
+            margin: 34px;
+            border: 2px solid black;
+            color: white;
+        }
+        .box:nth-child(odd){
+            background-color: rgb(156, 19, 19);
+        }
+        .box:nth-child(even){
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Bhupendra jogi</div>
+        <div class="box">Bhupendra jogi</div>
+        <div id="redbox" class="box">Bhupendra jogi</div>
+        <div class="box">Bhupendra jogi</div>
+        <div class="box">Bhupendra jogi</div>
+    </div>
+
+    <script src="Dom03.js"></script>
+</body>
+</html>
