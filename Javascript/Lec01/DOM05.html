@@ -9,6 +9,12 @@
             background-color: #212121;
             color: white;
         }
+
+        /* .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
     </style>
 </head>
 <body>
@@ -18,10 +24,12 @@
     </div>
 
 
-    //adding elemnts through Java script
+    <!-- //adding elemnts through Java script -->
     <script>
         let div = document.createElement("div");
         div.innerHTML = "I am Inserted to this HTML page <b>by Parthib and Rupsa</b>"
+        div.setAttribute('class','newClass')
+        div.setAttribute('style','color:orange')
         document.querySelector('.container').append(div)
     </script>
 

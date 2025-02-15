@@ -28,6 +28,17 @@ document.querySelector('.box2').getAttribute
 document.querySelector('.box2').getAttribute('style')
 'display: flex;'
 
+
+document.querySelector('.container').before(div)
+
+document.querySelector('.container').prepend(div)
+
+document.querySelector('.container').append(div)
+
+document.querySelector('.container').after(div)
+
+document.querySelector('.container').replaceWith(div)
+
 */
 
 // document.querySelector('.box2').setAttribute('style','display:none')
