@@ -42,3 +42,6 @@ document.querySelector('.container').replaceWith(div)
 */
 
 // document.querySelector('.box2').setAttribute('style','display:none')
+
+// let cont = document.querySelector(".container")
+// cont.insertAdjacentHTML("beforeend","<b>Hello Guys I'm Parthib")

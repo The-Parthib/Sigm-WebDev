@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM 05 HTML</title>
     <style>
-        body{
-            background-color: #212121;
-            color: white;
-        }
+      body {
+        background-color: #212121;
+        color: white;
+      }
 
-        /* .container{
+      /* .container{
             display: flex;
             justify-content: center;
             align-items: center;
         } */
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="box" data-createdBy="Parthib & Rupsa" data-concept="Rupsa">Hey I am a Box..!!</div>
-        <div class="box2" style="display: flex;">Hey I am a Box..!!</div>
-    </div>
 
+        .orange{
+          color:orange;
+          font-weight: 800;
+          align-self: self-end;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" data-createdBy="Parthib & Rupsa" data-concept="Rupsa">
+        Hey I am a Box..!!
+      </div>
+      <div class="box2" style="display: flex">Hey I am a Box..!!</div>
+    </div>
 
     <!-- //adding elemnts through Java script -->
     <script>
-        let div = document.createElement("div");
-        div.innerHTML = "I am Inserted to this HTML page <b>by Parthib and Rupsa</b>"
-        div.setAttribute('class','newClass')
-        div.setAttribute('style','color:orange')
-        document.querySelector('.container').append(div)
+      let div = document.createElement("div");
+      div.innerHTML =
+        "I am Inserted to this HTML page <b>by Parthib and Rupsa</b>";
+      div.setAttribute("class", "newClass");
+      div.setAttribute("style", "color:orange");
+      document.querySelector(".container").append(div);
     </script>
 
     <script src="dom05.js"></script>
-</body>
+  </body>
 </html>
