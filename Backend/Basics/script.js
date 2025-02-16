@@ -2,6 +2,8 @@
 // console.log('Namaste Duniyaa');
 // console.log('Nomoskar Prithibi');
 
-function add(a,b) {
-    return a+b;
-}
+const math = require("./math")
+
+// console.log(add(2,4))
+
+console.log(math);
