@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Standard Clock India</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: white;
+        font-size: large;
+        font-weight: 900;
+      }
+      .clock {
+        display: flex;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="clock"></div>
+    </div>
+    <script>
+      let a = setInterval(() => {
+        let curDate = new Date();
+        let d = curDate.toLocaleTimeString();
+        document.querySelector(".clock").innerText = d;
+      }, 1000);
+
+    //   setTimeout(() => {
+    //     document.body.style.backgroundColor = "blue";
+    //   }, 5000);
+    //   setTimeout(() => {
+    //     document.body.style.backgroundColor = "red";
+    //   }, 10000);
+    //   setTimeout(() => {
+    //     document.body.style.backgroundColor = "green";
+    //   }, 15000);
+    
+    </script>
+  </body>
+</html>

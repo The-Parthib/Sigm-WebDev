@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+
+    <style>
+        .child{
+            background-color: aqua;
+            border: 1px solid black;
+            border: 14px;
+            margin: 14px;
+            cursor: pointer;
+        }
+        .childContainer{
+            background-color: rgb(175, 23, 213);
+            border: 1px solid black;
+            border: 14px;
+            margin: 14px;
+            cursor: pointer;
+        }
+        .container{
+            background-color: red;
+            border: 1px solid black;
+            border: 14px;
+            margin: 14px;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="childContainer">
+        <div class="child">I am a child</div>
+      </span>
+    </div>
+    <script>
+      document.querySelector(".child").addEventListener("click", (e) => {
+        e.stopPropagation();
+        document.querySelector(".child").innerHTML =
+          "<b> Button Clicked </b> <br> Enjoy your click";
+        // button.style.backgroundColor = 'yellow'
+        console.log(e);
+      });
+
+      document
+        .querySelector(".childContainer")
+        .addEventListener("click", (e) => {
+          document.querySelector(".child").innerHTML =
+            "<b> Button Clicked </b> <br> Enjoy your click , childContainer Class";
+          // button.style.backgroundColor = 'yellow'
+          console.log(e);
+        });
+
+      document.querySelector(".container").addEventListener("click", (e) => {
+        document.querySelector(".child").innerHTML =
+          "<b> Button Clicked </b> <br> Enjoy your click, Container Class";
+        // button.style.backgroundColor = 'yellow'
+        console.log(e);
+      });
+    </script>
+  </body>
+</html>
