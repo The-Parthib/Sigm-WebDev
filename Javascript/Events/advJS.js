@@ -43,3 +43,18 @@ getCheese((cheese) => {
     })
   })
 });
+
+
+function add(a,b,cb){
+  let result = a+b;
+  cb(result)
+}
+
+// function showResult(result) {
+//   console.log(result)
+// }
+
+add(2,5,(val) =>  console.log(val) )
+add(410,635, (result) => console.log(result))
+
+console.log();
