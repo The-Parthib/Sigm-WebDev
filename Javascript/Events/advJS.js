@@ -57,4 +57,3 @@ function add(a,b,cb){
 add(2,5,(val) =>  console.log(val) )
 add(410,635, (result) => console.log(result))
 
-console.log();

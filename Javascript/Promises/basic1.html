@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async javaScript</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <center>
+        <h3>WellCome to Typical JS series</h3>
+
+        <h5>Hey listen</h5>
+      </center>
+    </div>
+  </body>
+
+  <script>
+    /*
+    const t1 = () => { 
+        document.querySelector('h5').innerHTML = 'Hello Babe 💖'
+     }
+    const t2 = () => { 
+        document.querySelector('h5').innerHTML = 'Tahole amra monday jacchi tw..? 😁'
+     }
+    const t3 = () => { 
+        document.querySelector('h5').innerHTML = 'Giye ki ki korbo..? 💀🤭'
+     }
+    const t4 = () => { 
+        document.querySelector('h5').innerHTML = 'Kokhon berobe..?? 😶‍🌫️'
+     }
+
+     setTimeout(t1, 2000);
+     setTimeout(t2, 4000);
+     setTimeout(t3, 6000);
+     setTimeout(t4, 8000);
+     */
+    const typeText = (text, speed = 50) => {
+      const h5 = document.querySelector("h5");
+      h5.innerHTML = ""; // Clear previous text
+      let i = 0;
+
+      const typing = setInterval(() => {
+        if (i < text.length) {
+          h5.innerHTML += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(typing); // Stop once all characters are added
+        }
+      }, speed);
+    };
+
+    // Schedule the typing effect
+    setTimeout(() => typeText("Hello Sayam Babu "), 2000);
+    setTimeout(() => typeText("Kal tahole documentation ta baniye nis"), 5000);
+    setTimeout(() => typeText("Dhani k emni pressure e rakh"), 8000);
+    setTimeout(() => typeText("Fest e ay moja hbe 😶‍🌫️"), 11000);
+  </script>
+</html>
